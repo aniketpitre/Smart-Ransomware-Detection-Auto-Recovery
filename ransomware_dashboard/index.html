@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Smart Ransomware Watcher</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Smart Ransomware Watcher</h1>
+    <button id="themeToggle">🌓</button>
+  </header>
+
+  <main>
+    <div class="left-panel">
+      <section class="card">
+        <h2>Data Folder <span id="dataBadge" class="badge">0</span></h2>
+        <button class="toggle-btn" data-target="dataContent">▼</button>
+        <div id="dataContent" class="folder-content"></div>
+      </section>
+      <section class="card">
+        <h2>Quarantine <span id="quarantineBadge" class="badge">0</span></h2>
+        <button class="toggle-btn" data-target="quarantineContent">▼</button>
+        <div id="quarantineContent" class="folder-content"></div>
+      </section>
+      <section class="card">
+        <h2>Backups <span id="backupBadge" class="badge">0</span></h2>
+        <button class="toggle-btn" data-target="backupContent">▼</button>
+        <div id="backupContent" class="folder-content"></div>
+      </section>
+
+      <section class="card system-health-card">
+        <h2>System Health</h2>
+        <div class="system-widget">
+          <label>CPU Usage</label>
+          <div class="progress-bar"><div id="cpuBar" class="fill"></div></div>
+        </div>
+        <div class="system-widget">
+          <label>RAM Usage</label>
+          <div class="progress-bar"><div id="ramBar" class="fill"></div></div>
+        </div>
+        <div class="system-widget">
+          <label>Disk Usage</label>
+          <div class="progress-bar"><div id="diskBar" class="fill"></div></div>
+        </div>
+        <div class="system-widget">
+          <label>Network Activity</label>
+          <div class="progress-bar"><div id="netBar" class="fill"></div></div>
+        </div>
+      </section>
+    </div>
+
+    <div class="right-panel">
+      <section class="card">
+        <h2>Live Alerts</h2>
+        <div id="notificationContainer"></div>
+      </section>
+      <section class="card">
+        <h2>Disk Usage Visualization</h2>
+        <canvas id="diskChart" width="250" height="250"></canvas>
+      </section>
+    </div>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
