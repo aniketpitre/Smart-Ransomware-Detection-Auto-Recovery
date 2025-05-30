@@ -24,3 +24,5 @@ A lightweight, real-time ransomware detection and recovery system with a modern 
 🧰 Quarantine View	Shows quarantined files
 🧠 System Stats	CPU, RAM, Disk, and Network usage
 📊 Disk Chart	Chart.js donut for space usage
+
+![final2](https://github.com/user-attachments/assets/1f8d922e-18c4-4a95-910c-36c514407a77)
